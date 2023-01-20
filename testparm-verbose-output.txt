@@ -1,3 +1,4 @@
+
 # Global parameters
 [global]
 	abort shutdown script = 
@@ -324,7 +325,7 @@
 	wtmp directory = 
 	idmap config * : backend = tdb
 	access based share enum = No
-	acl allow execute always = No
+	acl allow execute always = Yes
 	acl check permissions = Yes
 	acl group control = No
 	acl map full control = Yes
@@ -366,11 +367,11 @@
 	follow symlinks = Yes
 	force create mode = 0000
 	force directory mode = 0000
-	force group = 
+	force group = wheel
 	force printername = No
 	force unknown acl user = No
 	force user = 
-	fstype = NTFS
+	fstype = linux
 	guest ok = No
 	guest only = No
 	hide dot files = Yes
