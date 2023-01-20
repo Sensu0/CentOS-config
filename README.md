@@ -9,4 +9,6 @@ The CentOS server is running in a VM in Virtualbox. Host OS is Windows 10, but I
 
 Windows won't even let me access the share, even if I turn off the firewall. The CentOS client VM can access it, but is unable to write to it for some reason.
 
+/dev/sdb1 is formatted as an EXT4 partition with GPT table and Linux Filesystem type.
+
 Please provide assistance
