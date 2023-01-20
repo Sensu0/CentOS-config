@@ -1,0 +1,42 @@
+● nmb.service - Samba NMB Daemon
+   Loaded: loaded (/usr/lib/systemd/system/nmb.service; enabled; vendor preset: disabled)
+   Active: active (running) since Fri 2023-01-20 03:39:26 CET; 54min ago
+     Docs: man:nmbd(8)
+           man:samba(7)
+           man:smb.conf(5)
+ Main PID: 6963 (nmbd)
+   Status: "nmbd: ready to serve connections..."
+    Tasks: 1
+   CGroup: /system.slice/nmb.service
+           └─6963 /usr/sbin/nmbd --foreground --no-process-group
+
+Jan 20 03:39:49 localhost.localdomain nmbd[6963]: 
+Jan 20 03:39:49 localhost.localdomain nmbd[6963]:   Samba name server OLLES_RECEPT is now a local master browser for workgroup WORKGROUP on subnet 192.168.50.237
+Jan 20 03:39:49 localhost.localdomain nmbd[6963]: 
+Jan 20 03:39:49 localhost.localdomain nmbd[6963]:   *****
+Jan 20 03:39:49 localhost.localdomain nmbd[6963]: [2023/01/20 03:39:49.524575,  0] ../../source3/nmbd/nmbd_become_lmb.c:397(become_local_master_stage2)
+Jan 20 03:39:49 localhost.localdomain nmbd[6963]:   *****
+Jan 20 03:39:49 localhost.localdomain nmbd[6963]: 
+Jan 20 03:39:49 localhost.localdomain nmbd[6963]:   Samba name server OLLES_RECEPT is now a local master browser for workgroup WORKGROUP on subnet 192.168.122.1
+Jan 20 03:39:49 localhost.localdomain nmbd[6963]: 
+Jan 20 03:39:49 localhost.localdomain nmbd[6963]:   *****
+
+● smb.service - Samba SMB Daemon
+   Loaded: loaded (/usr/lib/systemd/system/smb.service; enabled; vendor preset: disabled)
+   Active: active (running) since Fri 2023-01-20 03:39:26 CET; 54min ago
+     Docs: man:smbd(8)
+           man:samba(7)
+           man:smb.conf(5)
+ Main PID: 6961 (smbd)
+   Status: "smbd: ready to serve connections..."
+    Tasks: 4
+   CGroup: /system.slice/smb.service
+           ├─6961 /usr/sbin/smbd --foreground --no-process-group
+           ├─7016 /usr/sbin/smbd --foreground --no-process-group
+           ├─7017 /usr/sbin/smbd --foreground --no-process-group
+           └─7018 /usr/sbin/smbd --foreground --no-process-group
+
+Jan 20 03:38:58 localhost.localdomain systemd[1]: Starting Samba SMB Daemon...
+Jan 20 03:39:26 localhost.localdomain smbd[6961]: [2023/01/20 03:39:26.351375,  0] ../../lib/util/become_daemon.c:136(daemon_ready)
+Jan 20 03:39:26 localhost.localdomain systemd[1]: Started Samba SMB Daemon.
+Jan 20 03:39:26 localhost.localdomain smbd[6961]:   daemon_ready: daemon 'smbd' finished starting up and ready to serve connections
